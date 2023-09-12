@@ -67,8 +67,8 @@ tmux \
 
 # Switch panes with <M-h/j/k/l>
 tmux \
-	bind-key -T "$keytable" M-k 'resize-pane -y 1 ; select-pane -U ; resize-pane -y 999' \; \
-	bind-key -T "$keytable" M-j 'resize-pane -y 1 ; select-pane -D ; resize-pane -y 999'
+	bind-key -T "$keytable" M-k select-pane -U \; \
+	bind-key -T "$keytable" M-j select-pane -D 
 tmux \
 	bind-key -T "$keytable" M-h select-pane -L \; \
 	bind-key -T "$keytable" M-l select-pane -R
